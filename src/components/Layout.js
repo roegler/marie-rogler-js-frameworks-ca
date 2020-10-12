@@ -7,11 +7,11 @@ import {
     Route,
     NavLink,
 } from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
 
 import Home from "../pages/Home"
 import Contact from "../pages/Contact"
-import Details from "../pages/Details"
 
 function Layout() {
     return (
@@ -38,8 +38,6 @@ function Layout() {
             <Container>
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/news" component={Contact} />
-                    <Route path="/login" component={Details} />
                 </Switch>
             </Container>
         </Router>

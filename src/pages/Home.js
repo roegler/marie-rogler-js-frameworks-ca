@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../components/Api";
+import SearchGame from "../components/SearchGame";
+import GameItem from "../components/GameItem";
 
-function GameList() {
+function Home() {
     // Storage
     const [games, setGames] = useState([]);
     const [filtredGames, setFilteredGames] = useState([]);
@@ -21,7 +23,7 @@ function GameList() {
         console.log(event.target.value)
         const searchText = event.target.value.toLowerCase();
         const filteredArray = games.filter(g => {
-            return g.title.toLowerCase().startsWith(searchText)
+            return g.name.toLowerCase().startsWith(searchText)
         })
         setFilteredGames(filteredArray);
     }
@@ -31,10 +33,10 @@ function GameList() {
         <div>
             <SearchGame handleSearch={searchGames} />
             {filtredGames.map(g => (
-                <GameItem key={g.name} background_image={g.background_image} rating={g.rating} released={g.released}/>
+                <GameItem key={g.id} name={g.name} background_image={g.background_image} rating={g.rating} released={g.released}/>
             ))}
         </div>
     );
 }
 
-export default GameList;
+export default Home;
