@@ -33,7 +33,7 @@ function Home() {
         <div>
             <SearchGame handleSearch={searchGames} />
             {filtredGames.map(g => (
-                <GameItem key={g.id} name={g.name} background_image={g.background_image} rating={g.rating} released={g.released}/>
+                <GameItem key={g.id} id={g.id} name={g.name} background_image={g.background_image} rating={g.rating} released={g.released}/>
             ))}
         </div>
     );
