@@ -3,7 +3,7 @@ import ContactForm from "../components/ContactForm";
 
 function form() {
     return (
-        <div>
+        <div class="mt-5">
             <ContactForm />
         </div>
     );

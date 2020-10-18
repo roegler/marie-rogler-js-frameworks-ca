@@ -1,15 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 function GameItem({ id, name, background_image, rating, released }) {
     return (
-        <div>
-            <h1>{name}</h1>
-            <img src={background_image} alt={name} width="500"/>
-            <p>Rating: {rating}</p>
-            <h3>Released: {released}</h3>
-            <Link to={ '/game/' + id }>Read more</Link>
-        </div>
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={background_image} height="150" />
+            <Card.Body>
+                <Card.Title>{name}</Card.Title>
+                <Card.Text>
+                    <p>Rating: {rating}</p>
+                    <p>Released: {released}</p>
+                </Card.Text>
+                <Button variant="primary" href={'/game/' + id}>Read more</Button>
+            </Card.Body>
+        </Card>
 
     )
 }
