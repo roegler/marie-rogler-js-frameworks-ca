@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../components/Api";
 import SearchGame from "../components/SearchGame";
 import GameItem from "../components/GameItem";
