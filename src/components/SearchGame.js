@@ -9,7 +9,6 @@ function SearchGame({ handleSearch }) {
             <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search games..." onChange={handleSearch} />
         </div>
     )
-
 }
 
 SearchGame.propTypes = {

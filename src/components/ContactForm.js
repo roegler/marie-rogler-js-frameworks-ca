@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const schema = yup.object().shape({
+    
     firstName: yup
         .string()
         .required("First name is required")
