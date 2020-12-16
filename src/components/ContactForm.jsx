@@ -30,9 +30,7 @@ function ContactForm() {
 
     function onSubmit(data) {
         console.log("data", data)
-            .then(() => {
                 alert("Thank you for your enquiry. We will get back to you shortly.")
-            })
     }
 
     return (
