@@ -32,13 +32,13 @@ function Home() {
     // Using the stuff in storage
     return (
         <div>
-            <div class="my-5">
+            <div className="my-5">
             <SearchGame handleSearch={searchGames} />
             </div>
             <Row>
                 {filtredGames.map(g => (
                     <Col>
-                        <div class="mb-3">
+                        <div className="mb-3">
                             <GameItem key={g.id} id={g.id} name={g.name} background_image={g.background_image} rating={g.rating} released={g.released} />
                         </div>
                     </Col>
