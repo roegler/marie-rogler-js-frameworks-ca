@@ -35,7 +35,7 @@ function ContactForm() {
 
     return (
         <div>
-            <Form /*noValidate*/ onSubmit={handleSubmit(onSubmit)}>
+            <Form noValidate onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group>
                     <Form.Control type="text" placeholder="Name" name="name" ref={register} />
                     {errors.name && <p>{errors.name.message}</p>}
