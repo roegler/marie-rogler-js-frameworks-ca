@@ -41,7 +41,7 @@ function ContactForm() {
                     {errors.name && <p>{errors.name.message}</p>}
 
                     <br />
-                    <Form.Control type="text" placeholder="Email" name="email" ref={register} />
+                    <Form.Control type="email" placeholder="Email" name="email" ref={register} />
                     {errors.email && <p>{errors.email.message}</p>}
 
                     <br />
